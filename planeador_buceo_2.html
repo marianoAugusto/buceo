@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset= "utf-8" />
+    <title>Cómo planear una inmersón en Buceo Recreativo!</title>
+    <style>
+        body
+      {
+        background-color: rgb(173, 230, 206);
+        color: black;
+        font-family: Helvetica;
+      }
+      </style>
+</head>
+<body>
+    <h1>¿Sabías que en el buceo recreativo tenés un límite de tiempo bajo el agua?</h1>
+    <p>
+        En un cilindro de buceo tenemos 21% de Oxígeno, 78% de Nitrógeno y el otro restante es una suma diminuta de diferentes gases. 
+    </p>
+    <p2>
+        A diferencia del Oxígeno, el Nitrógeno es más difícil de eliminar naturalmente de nuestro cuerpo. 
+        Ya que quedan diminutas burbujas de Nitrógeno en la sangre, nuestros músculos, nuestra piel,
+        básicamente en los fluidos y tejidos corporales. Por lo que, a medida que la presión disminuye, 
+        esas diminutas burbujas se irán expandiendo. Lo cual podría ocasionar la <strong>enfermedad de Descompresión</strong>.
+    </p2>
+    <p>
+        Al saber esto, debemos planear el tiempo que vamos a bucear, ya que no queremos que nuestro cuerpo se sature de Nitrógeno,
+        lo que nos llevaría a realizar obligatoriamente paradas de Descompresióna a medida que vamos ascendiendo, 
+        y nuestro buceo dejaría de ser Recreativo, que es nuestra premisa.
+    </p>
+    <h1>Vamos a planear!</h1>
+    <p>Recordá que en buceo recrativo vamos a<strong> no más</strong> de 30 metros</p>
+    <p>
+        ¿A cuántos metros de profundidad querés ir?
+        <input type="number" id="metritos" />
+        <input type="button" value= "a bucear!" id="botoncito"/>
+    </p>
+        <p id= "resultado"></p>
+
+    <script>
+var texto = document.getElementById("metritos");
+var boton = document.getElementById("botoncito");
+boton.addEventListener("click", minutosPorClick);
+
+var metros = parseInt(texto.value);
+var minutos_final;
+
+//var minutos = (minutosPorClick)
+//documet.write(minutos);//ver esto y la funcion return
+
+
+function minutosPorClick(metros, minutos_final)
+{
+var metros = parseInt(texto.value);
+if (metros < 10)
+{
+    minutos_final = parseInt(minutos_final);
+    resultado.innerHTML = "<strong>Quedáte a vivir bajo el agua!</strong>";
+    }
+else if (metros <= 12)
+    {
+        minutos_final = 199;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";    
+    }
+else if (metros <= 14)
+    {
+        minutos_final = 134;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 16)
+    {
+        minutos_final = 92;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 18)
+    {
+        minutos_final = 55;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 20)
+    {
+        minutos_final = 44;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 22)
+    {
+        minutos_final = 36;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 25)
+    {
+        minutos_final = 28;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else if (metros <= 30)
+    {
+        minutos_final = 18;
+        minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>Podés bucear <strong><i>" + minutos_final + " minutos!</i></strong>";
+    }
+else //(metros >= 21)
+    {
+        //minutos_final = parseInt(minutos_final);
+        resultado.innerHTML = "<strong>No te da la nafta, gil!</strong>";   
+    } 
+    
+}
+var resultado = document.getElementById("resultado");
+
+    </script>
+    
+</body>
+</html>
